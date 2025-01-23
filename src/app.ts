@@ -15,7 +15,7 @@ app.set("port", process.env.PORT || 3000);
 
 //middlewares
 app.use(morgan("dev"));
-app.use(cors());
+app.use(cors({ origin: "http://localhost:4200" }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
